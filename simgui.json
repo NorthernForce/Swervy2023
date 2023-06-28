@@ -1,0 +1,21 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/NFRTankDrive/drive": "Subsystem",
+      "/LiveWindow/Ungrouped/DifferentialDrive[1]": "DifferentialDrive",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/LiveWindow/Ungrouped/navX-Sensor[4]": "Gyro",
+      "/Shuffleboard/Autonomous/Autonomous routine?": "String Chooser",
+      "/Shuffleboard/Autonomous/Field": "Field2d",
+      "/Shuffleboard/Autonomous/Starting location?": "String Chooser"
+    },
+    "windows": {
+      "/Shuffleboard/Autonomous/Field": {
+        "window": {
+          "visible": true
+        }
+      }
+    }
+  }
+}
