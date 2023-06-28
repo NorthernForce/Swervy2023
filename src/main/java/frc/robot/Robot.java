@@ -6,8 +6,8 @@ package frc.robot;
 
 import java.util.Map;
 
-import org.northernforce.util.RobotChooser;
-import org.northernforce.util.RobotContainer;
+import org.northernforce.util.NFRRobotChooser;
+import org.northernforce.util.NFRRobotContainer;
 
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -25,7 +25,7 @@ import frc.robot.robots.SquishyContainer;
  * project.
  */
 public class Robot extends TimedRobot {
-  private RobotContainer container;
+  private NFRRobotContainer container;
   private SendableChooser<Pose2d> poseChooser;
   private SendableChooser<Command> autonomousChooser;
   private Command autonomousCommand;
@@ -35,7 +35,10 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    container = new RobotChooser(() -> new SquishyContainer(), Map.of("Squishy", () -> new SquishyContainer())).getRobotContainer();
+    container = new NFRRobotChooser(
+      () -> new SquishyContainer(),
+      Map.of("Squishy", () -> new SquishyContainer())
+    ).getNFRRobotContainer();
     XboxController driverController = new XboxController(0);
     XboxController manipulatorController = new XboxController(1);
     container.bindOI(driverController, manipulatorController);
