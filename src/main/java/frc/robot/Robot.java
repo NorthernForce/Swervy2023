@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.robots.SquishyContainer;
+import frc.robot.robots.SwervyContainer;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -36,8 +36,8 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     container = new NFRRobotChooser(
-      () -> new SquishyContainer(),
-      Map.of("Squishy", () -> new SquishyContainer())
+      () -> new SwervyContainer(),
+      Map.of("Swervy", () -> new SwervyContainer())
     ).getNFRRobotContainer();
     XboxController driverController = new XboxController(0);
     XboxController manipulatorController = new XboxController(1);
